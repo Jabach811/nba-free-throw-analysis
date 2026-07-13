@@ -3,21 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="0; url=mockups/analyst-workstation-v2.html">
-    <title>NBA Free-Throw Intelligence</title>
-    <link rel="canonical" href="mockups/analyst-workstation-v2.html">
-    <style>
-      body { margin: 0; background: #071322; color: #eef6ff; font: 16px/1.5 system-ui, sans-serif; }
-      main { max-width: 42rem; margin: 18vh auto; padding: 2rem; }
-      a { color: #66a6ff; }
-    </style>
+    <meta name="theme-color" content="#07111f">
+    <meta name="description" content="Interactive Golden State Warriors free-throw intelligence dashboard.">
+    <title>FT Context Lab · Golden State Warriors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
   </head>
   <body>
-    <main>
-      <h1>NBA Free-Throw Intelligence</h1>
-      <p>Opening the Golden State Warriors analyst workstation…</p>
-      <p><a href="mockups/analyst-workstation-v2.html">Open the dashboard</a></p>
-    </main>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand"><span>FT</span><div><b>CONTEXT LAB</b><small>NBA free-throw intelligence</small></div></div>
+        <section class="team-card"><span>TEAM</span><b>Golden State Warriors</b><small>2025–26 · 85 games</small></section>
+        <nav class="workspace-nav" aria-label="Workspace">
+          <span class="nav-label">WORKSPACE</span>
+          <button class="nav-button active" data-view="overview"><span>◫</span>Team overview</button>
+          <button class="nav-button" data-view="compare"><span>⇄</span>Compare players</button>
+          <button class="nav-button" data-view="attempts"><span>≡</span>Attempt explorer</button>
+        </nav>
+        <div class="players-head"><span class="nav-label">PLAYERS</span><small id="player-count">Loading…</small></div>
+        <div class="player-list" id="player-list"></div>
+        <footer><span>Source</span><small>ESPN public play-by-play and box scores</small></footer>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button class="menu-button" data-sidebar-toggle aria-label="Toggle player navigation">☰</button>
+          <nav class="top-tabs" aria-label="Dashboard views">
+            <button class="active" data-view="overview">Overview</button>
+            <button data-view="player">Player detail</button>
+            <button data-view="compare">Compare</button>
+            <button data-view="attempts">Attempts</button>
+          </nav>
+          <div class="global-filters">
+            <label><span>Segment</span><select data-global-filter="segment"><option value="all">All segments</option><option>Regular Season</option><option>Play-In</option><option>Playoffs</option></select></label>
+            <label><span>Venue</span><select data-global-filter="venue"><option value="all">Home + away</option><option value="home">Home</option><option value="away">Away</option></select></label>
+          </div>
+        </header>
+        <main id="content" tabindex="-1"></main>
+        <div id="loading" class="loading"><i></i><b>Loading 1,776 classified attempts…</b><small>Building team and player views</small></div>
+      </div>
+    </div>
   </body>
 </html>
-

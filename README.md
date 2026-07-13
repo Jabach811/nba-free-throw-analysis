@@ -9,11 +9,17 @@ The current prototype covers the Golden State Warriors' complete 2025-26 regular
 - 1,776 attempts and 1,430 makes
 - team and per-player summaries
 - attempt-, trip-, and stint-level exports
-- a static Analyst Workstation dashboard prototype
+- a responsive, interactive Analyst Workstation dashboard
 
 ## View the dashboard
 
-Open `index.html` locally, or use the GitHub Pages URL published from this repository.
+Use the GitHub Pages URL published from this repository. For local use, serve the folder over HTTP so the dashboard can load its JSON dataset:
+
+```powershell
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000/`.
 
 ## Project map
 
@@ -22,7 +28,8 @@ Open `index.html` locally, or use the GitHub Pages URL published from this repos
 - `output/warriors-2025-26/` — finalized team dataset and findings
 - `output/curry-2025-26/` — Stephen Curry player analysis
 - `output/jalen-brunson-2025-26/` — Jalen Brunson player analysis
-- `mockups/` — Analyst Workstation interface
+- `index.html`, `styles.css`, and `app.js` — interactive Analyst Workstation
+- `mockups/` — approved static design references
 - `skill-development/nba-free-throw-analysis/` — reusable Codex skill
 - `docs/superpowers/` — system design and implementation plans
 
