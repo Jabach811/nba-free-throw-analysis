@@ -1,0 +1,4 @@
+interface:
+  display_name: "NBA Free-Throw Analysis"
+  short_description: "Classify every NBA free throw by trip context"
+  default_prompt: "Use $nba-free-throw-analysis to analyze a player season by free-throw trip type and interruption context."

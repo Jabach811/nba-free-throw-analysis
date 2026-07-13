@@ -1,0 +1,9 @@
+{
+  "games_discovered": 45,
+  "games_failed": [],
+  "games_reconciled": 45,
+  "reconciliation_mismatches": [],
+  "attempts": 232,
+  "complete": true,
+  "source": "ESPN public play-by-play and box-score game log"
+}

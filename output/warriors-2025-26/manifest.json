@@ -1,0 +1,19 @@
+{
+  "team_id": "9",
+  "team_slug": "gs",
+  "team_name": "Golden State Warriors",
+  "season": "2025-26",
+  "season_end_year": 2026,
+  "source": "ESPN public play-by-play and box score",
+  "schema_version": "2.0",
+  "games_discovered": 85,
+  "games_reconciled": 85,
+  "games_failed": [],
+  "reconciliation_mismatches": [],
+  "players_with_attempts": 22,
+  "attempts": 1776,
+  "makes": 1430,
+  "classification_anomalies": 0,
+  "stint_anomalies": 0,
+  "complete": true
+}
